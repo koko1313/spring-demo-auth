@@ -1,4 +1,4 @@
-package com.example.springdeloauth.security;
+package com.example.springdemoauth.security;
 
 import org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -19,6 +19,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests().antMatchers("/**").permitAll()
 		.requestMatchers(EndpointRequest.toAnyEndpoint()).permitAll()
 		.and().csrf().disable();
+		
+		http.headers().frameOptions().disable();
 	}
 	
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {

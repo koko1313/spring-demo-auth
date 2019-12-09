@@ -1,4 +1,4 @@
-package com.example.springdeloauth.security;
+package com.example.springdemoauth.security;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -14,9 +14,9 @@ import com.example.springdemoauth.models.UserModel;
 @Service
 public class ApplicationUserDetailsService implements UserDetailsService {
 
-	// private UserModel userRepo;
+	// private UserRepository userRepo;
 	
-	public ApplicationUserDetailsService() {
+	public ApplicationUserDetailsService(/* UserRepository userRepo */) {
 		// this.userRepo = userRepo;
 	}
 	
@@ -42,6 +42,7 @@ public class ApplicationUserDetailsService implements UserDetailsService {
 		user.setRoles(userRoles);
 		// end of hardcored code
 		
+		//Set<RoleModel> roles = new HashSet<>(user.getRoles());
 		Set<String> roles = user.getRoles();
 		
 		return new UserPrincipal(user, roles);

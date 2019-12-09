@@ -1,4 +1,4 @@
-package com.example.springdeloauth.security;
+package com.example.springdemoauth.security;
 
 import java.util.Collection;
 import java.util.HashSet;

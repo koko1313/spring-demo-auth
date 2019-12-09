@@ -17,9 +17,11 @@ import com.example.springdemoauth.models.UserModel;
 public class LoginController {
 
 	private UserDetailsService userDetailsService;
+	// private UserRepository userRepo;
 	
-	public LoginController(UserDetailsService userDetailsService) {
+	public LoginController(UserDetailsService userDetailsService /* , UserRepository userRepo */) {
 		this.userDetailsService = userDetailsService;
+		// this.userRepo = userRepo;
 	}
 	
 	// have to be with PostMapping
