@@ -10,12 +10,14 @@ A simple Spring project, that demonstrates in-memory authentication and authoriz
 </dependency>
 ```
 
-2. Configure (create) **SecurityConfig**
+2. Create UserModel, UserRepository, RoleModel, etc ...
 
 3. Create **UserPrincipal** *implementing UserDetails*
 
-4. Create **UserDetailsService** *implementing UserDetailsService*
+4. Create **ApplicationUserDetailsService** *implementing UserDetailsService*
 
-5. Create **LoginController** with login end-point
+5. Configure (create) **SecurityConfig**
 
-6. In **HomeController** there are some authorization examples
+6. Create **LoginController** with login end-point
+
+7. In **HomeController** there are some authorization examples
